@@ -7,9 +7,12 @@
     "format": "prettier --write .",
     "check-format": "prettier --check .",
     "build": "webpack --mode=production",
-    "firefly-episodes": "cd .. && cd firefly-episodes && yarn start --port 9001",
-    "firefly-locations": "cd .. && cd firefly-locations && yarn start --port 9002",
-    "all": "npm-run-all --parallel start firefly-episodes firefly-locations"
+    "episodes": "cd .. && cd single-spa-react-app-episodes && yarn start --port 9001",
+    "locations": "cd .. && cd single-spa-react-app-locations && yarn start --port 9002",
+    "episodes-build": "cd .. && cd single-spa-react-app-episodes && yarn",
+    "locations-build": "cd .. && cd single-spa-react-app-locations && yarn",
+    "start-all": "npm-run-all --parallel start episodes locations",
+    "build-all": "npm-run-all --parallel start episodes-build locations-build"
   },
   "husky": {
     "hooks": {
